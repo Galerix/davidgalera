@@ -20,6 +20,7 @@ const Features = () => {
       textAlign={"center"}
       alignItems={"center"}
       justifyContent={"center"}
+      overflow="hidden"
       minH={"100vh"}
       py={"10vh"}
       px={"5vw"}

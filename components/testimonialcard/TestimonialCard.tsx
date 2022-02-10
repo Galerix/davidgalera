@@ -16,7 +16,7 @@ const TestimonialCard = (props: TestimonialCardProps) => {
 
   const testimonialVariants = {
     hidden: {
-      translateX: -100,
+      translateX: -50,
       opacity: 0,
       transition: { duration: 0.85 },
     },
@@ -40,7 +40,7 @@ const TestimonialCard = (props: TestimonialCardProps) => {
       bg={useColorModeValue("white", "brand.800")}
       initial="hidden"
       whileInView={"visible"}
-      viewport={{ once: true, amount: 0.9 }}
+      viewport={{ once: true }}
       variants={testimonialVariants}
     >
       <Flex

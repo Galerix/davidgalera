@@ -23,6 +23,8 @@ export default function Testimonials() {
       alignItems={"center"}
       justifyContent={"center"}
       minH={"100vh"}
+      width="100vw"
+      overflow={"hidden"}
       py={"15vh"}
       spacing={{ base: 16 }}
     >

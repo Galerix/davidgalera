@@ -21,6 +21,8 @@ const Proyects = () => {
       px={4}
       alignItems={"center"}
       minH={"100vh"}
+      width="100vw"
+      overflow={"hidden"}
       py={"15vh"}
       spacing={{ base: 16 }}
       bg={useColorModeValue("gray.100", "brand.800")}

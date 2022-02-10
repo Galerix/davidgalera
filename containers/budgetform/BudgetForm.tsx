@@ -52,10 +52,6 @@ const BudgetForm = () => {
       alignItems={"center"}
       minH={"100vh"}
       py={"15vh"}
-      initial="hidden"
-      whileInView="visible"
-      variants={budgetFormVariants}
-      viewport={{ once: true, amount: 0.2 }}
     >
       <MotionStack
         direction={{ base: "column", md: "row" }}
@@ -92,14 +88,18 @@ const BudgetForm = () => {
           </Button>
         </VStack>
 
-        <VStack
+        <MotionStack
           minW={{ base: "80vw", md: "35vw" }}
           spacing={5}
           boxShadow={"2xl"}
           bg={useColorModeValue("white", "brand.800")}
           borderRadius="lg"
-          padding={50}
+          padding={8}
           textAlign="center"
+          initial="hidden"
+          whileInView="visible"
+          variants={budgetFormVariants}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <FormControl id="name">
             <FormLabel>Nombre</FormLabel>
@@ -128,7 +128,7 @@ const BudgetForm = () => {
           <FormControl id="name">
             <Button variant="solid">Enviar</Button>
           </FormControl>
-        </VStack>
+        </MotionStack>
       </MotionStack>
     </MotionStack>
   );
