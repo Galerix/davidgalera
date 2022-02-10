@@ -11,6 +11,7 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
+  Stack,
   Text,
   Textarea,
   useColorModeValue,
@@ -44,7 +45,7 @@ const BudgetForm = () => {
   };
 
   return (
-    <MotionStack
+    <Stack
       as={Box}
       margin={"auto"}
       mx={"auto"}
@@ -53,7 +54,7 @@ const BudgetForm = () => {
       minH={"100vh"}
       py={"15vh"}
     >
-      <MotionStack
+      <Stack
         direction={{ base: "column", md: "row" }}
         spacing={{ base: 5, md: 12 }}
       >
@@ -89,6 +90,7 @@ const BudgetForm = () => {
         </VStack>
 
         <MotionStack
+          willChange={"transform, opacity"}
           minW={{ base: "80vw", md: "35vw" }}
           spacing={5}
           boxShadow={"2xl"}
@@ -129,8 +131,8 @@ const BudgetForm = () => {
             <Button variant="solid">Enviar</Button>
           </FormControl>
         </MotionStack>
-      </MotionStack>
-    </MotionStack>
+      </Stack>
+    </Stack>
   );
 };
 

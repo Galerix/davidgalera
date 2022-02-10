@@ -30,6 +30,7 @@ const Feature = ({ title, text, icon, delay }: FeatureProps) => {
 
   return (
     <MotionStack
+      willChange={"transform, opacity"}
       align={"center"}
       initial="hidden"
       whileInView={"visible"}

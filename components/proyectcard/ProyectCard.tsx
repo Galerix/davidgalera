@@ -37,6 +37,7 @@ const ProyectCard = (props: ProyectCardProps) => {
 
   return (
     <MotionStack
+      willChange={"transform, opacity"}
       boxShadow={"2xl"}
       maxW={{ base: "none", md: "80vw" }}
       bg={useColorModeValue("white", "brand.900")}
@@ -44,7 +45,7 @@ const ProyectCard = (props: ProyectCardProps) => {
       direction={{ base: "column", lg: "row" }}
       initial="hidden"
       whileInView={"visible"}
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.5 }}
       variants={proyectVariants}
       overflow="hidden"
     >

@@ -29,6 +29,7 @@ const TestimonialCard = (props: TestimonialCardProps) => {
 
   return (
     <MotionStack
+      willChange={"transform, opacity"}
       boxShadow={"2xl"}
       maxW={"640px"}
       direction={{ base: "column-reverse", md: "row" }}
@@ -40,7 +41,7 @@ const TestimonialCard = (props: TestimonialCardProps) => {
       bg={useColorModeValue("white", "brand.800")}
       initial="hidden"
       whileInView={"visible"}
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.5 }}
       variants={testimonialVariants}
     >
       <Flex

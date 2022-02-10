@@ -1,4 +1,4 @@
-import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid, Stack } from "@chakra-ui/react";
 import { TestimonialCard } from "../../components";
 import { MotionStack } from "../../motioncomponents";
 
@@ -14,7 +14,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <MotionStack
+    <Stack
       as={Box}
       margin={"auto"}
       mx={"auto"}
@@ -40,6 +40,6 @@ export default function Testimonials() {
           />
         ))}
       </SimpleGrid>
-    </MotionStack>
+    </Stack>
   );
 }

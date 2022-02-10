@@ -1,4 +1,10 @@
-import { Box, Heading, SimpleGrid, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  SimpleGrid,
+  Stack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { ProyectCard } from "../../components";
 import { MotionStack } from "../../motioncomponents";
 
@@ -14,7 +20,7 @@ const proyects = [
 
 const Proyects = () => {
   return (
-    <MotionStack
+    <Stack
       as={Box}
       margin={"auto"}
       mx={"auto"}
@@ -39,7 +45,7 @@ const Proyects = () => {
           />
         ))}
       </SimpleGrid>
-    </MotionStack>
+    </Stack>
   );
 };
 

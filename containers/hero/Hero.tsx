@@ -97,6 +97,7 @@ const Hero = () => {
 
   return (
     <MotionStack
+      willChange={"transform, opacity"}
       mx={"auto"}
       px={4}
       as={Box}
