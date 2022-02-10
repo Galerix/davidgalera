@@ -60,7 +60,7 @@ const ProyectCard = (props: ProyectCardProps) => {
           {title}
         </Text>
         <Text color={"gray.500"}>{description}</Text>
-        <a href={href} target="_blank">
+        <a href={href} target="_blank" rel="noreferrer noopener">
           <Button fontWeight={"bold"} rounded="full">
             Visitar Proyecto
           </Button>
