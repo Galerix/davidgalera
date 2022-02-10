@@ -1,7 +1,8 @@
 import React from "react";
+import { Proyects } from "../containers";
 
 const Proyectos = () => {
-  return <div>Proyectos</div>;
+  return <Proyects />;
 };
 
 export default Proyectos;
