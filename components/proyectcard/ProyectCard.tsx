@@ -24,12 +24,12 @@ const ProyectCard = (props: ProyectCardProps) => {
 
   const proyectVariants = {
     hidden: {
-      x: "8vw",
+      translateX: 100,
       opacity: 0,
-      transition: { duration: 0.85 },
+      transition: { duration: 0.9 },
     },
     visible: {
-      x: 0,
+      translateX: 0,
       opacity: 1,
       transition: { duration: 0.7, delay: delay },
     },
@@ -44,7 +44,7 @@ const ProyectCard = (props: ProyectCardProps) => {
       direction={{ base: "column", lg: "row" }}
       initial="hidden"
       whileInView={"visible"}
-      viewport={{ once: true, amount: 0.9 }}
+      viewport={{ once: true, amount: 0.8 }}
       variants={proyectVariants}
       overflow="hidden"
     >

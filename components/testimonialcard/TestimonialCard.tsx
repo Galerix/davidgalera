@@ -16,12 +16,12 @@ const TestimonialCard = (props: TestimonialCardProps) => {
 
   const testimonialVariants = {
     hidden: {
-      x: "-10vw",
+      translateX: -100,
       opacity: 0,
       transition: { duration: 0.85 },
     },
     visible: {
-      x: 0,
+      translateX: 0,
       opacity: 1,
       transition: { duration: 0.7, delay: delay },
     },

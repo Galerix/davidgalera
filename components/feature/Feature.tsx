@@ -17,12 +17,12 @@ const Feature = ({ title, text, icon, delay }: FeatureProps) => {
 
   const featureVariants = {
     hidden: {
-      y: "100%",
+      translateY: 200,
       opacity: 0,
       transition: { duration: 0.85 },
     },
     visible: {
-      y: 0,
+      translateY: 0,
       opacity: 1,
       transition: { duration: 0.5, delay: finalDelay },
     },
