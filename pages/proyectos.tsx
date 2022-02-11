@@ -2,7 +2,7 @@ import React from "react";
 import { Proyects } from "../containers";
 
 const Proyectos = () => {
-  return <Proyects />;
+  return <Proyects originalBackground />;
 };
 
 export default Proyectos;

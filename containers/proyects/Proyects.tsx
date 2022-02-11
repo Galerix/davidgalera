@@ -6,7 +6,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { ProyectCard } from "../../components";
-import { MotionStack } from "../../motioncomponents";
 
 const proyects = [
   {
@@ -18,7 +17,15 @@ const proyects = [
   },
 ];
 
-const Proyects = () => {
+type ProyectsProps = {
+  originalBackground: boolean;
+};
+
+const Proyects = ({ originalBackground }: ProyectsProps) => {
+  const background = originalBackground
+    ? "inherit"
+    : useColorModeValue("gray.100", "brand.800");
+
   return (
     <Stack
       as={Box}
@@ -29,9 +36,9 @@ const Proyects = () => {
       minH={"100vh"}
       width="100vw"
       overflow={"hidden"}
-      py={"15vh"}
+      py={originalBackground ? "5vh" : "15vh"}
       spacing={{ base: 16 }}
-      bg={useColorModeValue("gray.100", "brand.800")}
+      bg={background}
     >
       <Heading>PROYECTOS</Heading>
 
@@ -42,6 +49,7 @@ const Proyects = () => {
             index={index}
             key={cardInfo.title}
             delay={0}
+            originalBackground={originalBackground}
           />
         ))}
       </SimpleGrid>

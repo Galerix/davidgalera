@@ -1,11 +1,5 @@
 import type { NextPage } from "next";
-import {
-  BudgetForm,
-  Features,
-  Hero,
-  Proyects,
-  Testimonials,
-} from "../containers";
+import { Budget, Features, Hero, Proyects, Testimonials } from "../containers";
 
 const Home: NextPage = () => {
   return (
@@ -13,8 +7,8 @@ const Home: NextPage = () => {
       <Hero />
       <Features />
       <Testimonials />
-      <Proyects />
-      <BudgetForm />
+      <Proyects originalBackground={false} />
+      <Budget />
     </div>
   );
 };

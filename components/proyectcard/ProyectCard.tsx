@@ -17,10 +17,16 @@ interface ProyectCardProps {
   href: string;
   index: number;
   delay: number;
+  originalBackground: boolean;
 }
 
 const ProyectCard = (props: ProyectCardProps) => {
-  const { title, description, image, href, index, delay } = props;
+  const { title, description, image, href, index, delay, originalBackground } =
+    props;
+
+  const background = originalBackground
+    ? useColorModeValue("white", "brand.800")
+    : useColorModeValue("white", "brand.900");
 
   const proyectVariants = {
     hidden: {
@@ -40,7 +46,7 @@ const ProyectCard = (props: ProyectCardProps) => {
       willChange={"transform, opacity"}
       boxShadow={"2xl"}
       maxW={{ base: "none", md: "80vw" }}
-      bg={useColorModeValue("white", "brand.900")}
+      bg={background}
       rounded={"xl"}
       direction={{ base: "column", lg: "row" }}
       initial="hidden"
