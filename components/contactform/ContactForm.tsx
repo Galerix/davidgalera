@@ -49,10 +49,9 @@ const ContactForm = () => {
       <FormControl id="name">
         <FormLabel>Nombre</FormLabel>
         <InputGroup>
-          <InputLeftElement
-            pointerEvents="none"
-            children={<BsPerson color="gray.800" />}
-          />
+          <InputLeftElement pointerEvents="none">
+            <BsPerson color="gray.800" />
+          </InputLeftElement>
           <Input
             type="text"
             value={name}
@@ -65,10 +64,9 @@ const ContactForm = () => {
       <FormControl id="name">
         <FormLabel>Email</FormLabel>
         <InputGroup>
-          <InputLeftElement
-            pointerEvents="none"
-            children={<MdOutlineEmail color="gray.800" />}
-          />
+          <InputLeftElement pointerEvents="none">
+            <MdOutlineEmail color="gray.800" />
+          </InputLeftElement>
           <Input
             type="text"
             value={email}

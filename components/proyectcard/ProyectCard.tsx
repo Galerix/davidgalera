@@ -24,9 +24,9 @@ const ProyectCard = (props: ProyectCardProps) => {
   const { title, description, image, href, index, delay, originalBackground } =
     props;
 
-  const background = originalBackground
-    ? useColorModeValue("white", "brand.800")
-    : useColorModeValue("white", "brand.900");
+  const darkModeBG = originalBackground ? "brand.800" : "brand.900";
+
+  const background = useColorModeValue("white", darkModeBG);
 
   const proyectVariants = {
     hidden: {
