@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
+const nodemailer = require("nodemailer");
+
 require("dotenv").config();
 
 type Data = {
@@ -8,10 +10,9 @@ type Data = {
   message: string;
 };
 
-export default function (req: NextApiRequest, res: NextApiResponse<Data>) {
+export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   const { name, email, message } = req.body;
 
-  const nodemailer = require("nodemailer");
   const transporter = nodemailer.createTransport({
     port: 465,
     host: "smtp.gmail.com",
@@ -20,6 +21,19 @@ export default function (req: NextApiRequest, res: NextApiResponse<Data>) {
       pass: process.env.GOOGLE_PASSWORD,
     },
     secure: true,
+  });
+
+  await new Promise((resolve, reject) => {
+    // verify connection configuration
+    transporter.verify(function (error: string, success: string) {
+      if (error) {
+        console.log(error);
+        reject(error);
+      } else {
+        console.log("Server is ready to take our messages");
+        resolve(success);
+      }
+    });
   });
 
   const mailData = {
@@ -34,10 +48,18 @@ export default function (req: NextApiRequest, res: NextApiResponse<Data>) {
     ${email}</p>`,
   };
 
-  transporter.sendMail(mailData, function (err: string, info: string) {
-    if (err) console.log(err);
-    else console.log(info);
+  await new Promise((resolve, reject) => {
+    // send mail
+    transporter.sendMail(mailData, (err: string, info: string) => {
+      if (err) {
+        console.error(err);
+        reject(err);
+      } else {
+        console.log(info);
+        resolve(info);
+      }
+    });
   });
 
   res.status(200).send({ name, email, message });
-}
+};
