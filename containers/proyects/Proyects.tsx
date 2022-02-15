@@ -34,7 +34,6 @@ const Proyects = ({ originalBackground }: ProyectsProps) => {
       px={4}
       alignItems={"center"}
       minH={"100vh"}
-      width="100vw"
       overflow={"hidden"}
       py={originalBackground ? "5vh" : "15vh"}
       spacing={{ base: 16 }}

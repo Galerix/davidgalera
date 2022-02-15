@@ -23,12 +23,11 @@ export default function Testimonials() {
       alignItems={"center"}
       justifyContent={"center"}
       minH={"100vh"}
-      width="100vw"
       overflow={"hidden"}
       py={"15vh"}
       spacing={{ base: 16 }}
     >
-      <Heading>TESTIMONIOS</Heading>
+      <Heading>OPINIONES</Heading>
 
       <SimpleGrid columns={{ base: 1 }} spacing={"20"} mx={"auto"}>
         {testimonials.map((cardInfo, index) => (

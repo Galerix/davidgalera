@@ -33,7 +33,6 @@ const DesktopNav = ({ navItems }: Props) => {
               p={2}
               fontSize={"sm"}
               fontFamily={"body"}
-              fontWeight={"bold"}
               borderBottomColor={linkBorderColor}
               _hover={{
                 borderBottomWidth: 3,

@@ -5,7 +5,7 @@ import "@fontsource/inter";
 import "@fontsource/gugi";
 import "@fontsource/oxanium";
 
-import { Navbar } from "..";
+import { Footer, Navbar } from "..";
 
 type Props = {
   children: React.ReactNode;
@@ -15,6 +15,7 @@ const Layout = ({ children }: Props) => {
     <>
       <Navbar />
       {children}
+      <Footer />
     </>
   );
 };

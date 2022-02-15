@@ -13,7 +13,13 @@ type Props = {
 
 const MobileNav = ({ navItems, onClose }: Props) => {
   return (
-    <Stack spacing={4} p={4} display={{ lg: "none" }} textAlign={"center"}>
+    <Stack
+      spacing={4}
+      p={4}
+      display={{ lg: "none" }}
+      textAlign={"center"}
+      willChange={"transform, opacity"}
+    >
       {navItems.map((navItem: NavItem) => (
         <MobileNavItem
           key={navItem.label}
