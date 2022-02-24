@@ -5,11 +5,8 @@ import {
   Flex,
   Heading,
   IconButton,
-  Image,
   LinkBox,
-  LinkOverlay,
   Stack,
-  Text,
   useColorMode,
   useColorModeValue,
   useDisclosure,
@@ -17,6 +14,7 @@ import {
 import React from "react";
 
 import NextLink from "next/link";
+import Image from "next/image";
 
 import { DesktopNav, MobileNav } from "../../components";
 
@@ -50,13 +48,21 @@ const Navbar = () => {
             spacing={4}
             align="center"
           >
-            <Image
-              bgColor={useColorModeValue("brand.500", "brand.200")}
+            <Box
+              position={"relative"}
+              overflow={"hidden"}
               borderRadius="full"
               boxSize={{ base: "30px", sm: "40px", md: "50px" }}
-              src="/images/photo.png"
-              alt="David Galera"
-            />
+              bgColor={useColorModeValue("brand.500", "brand.200")}
+            >
+              <Image
+                src="/images/photo.png"
+                alt="David Galera"
+                layout="fill"
+                objectFit="cover"
+              />
+            </Box>
+
             <Flex direction={"column"}>
               <NextLink href="/">
                 <Box onClick={onClose}>

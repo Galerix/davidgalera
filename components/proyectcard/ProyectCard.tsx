@@ -1,12 +1,5 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Image,
-  Text,
-  useColorModeValue,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Button, Text, useColorModeValue, VStack } from "@chakra-ui/react";
+import Image from "next/image";
 import React from "react";
 import { MotionStack } from "../../motioncomponents";
 
@@ -55,7 +48,14 @@ const ProyectCard = (props: ProyectCardProps) => {
       variants={proyectVariants}
       overflow="hidden"
     >
-      <Image src={image} fit="cover" maxW={{ base: "none", lg: "50vw" }} />
+      <Box
+        minH={{ base: "50vw", md: "60vh" }}
+        minW={"50vw"}
+        position={"relative"}
+      >
+        <Image src={image} layout="fill" objectFit="cover" />
+      </Box>
+
       <VStack
         p={5}
         spacing={10}
@@ -66,7 +66,9 @@ const ProyectCard = (props: ProyectCardProps) => {
         <Text fontWeight={600} fontFamily={"heading"}>
           {title}
         </Text>
-        <Text color={"gray.500"}>{description}</Text>
+        <Text color={"gray.500"} textAlign="justify">
+          {description}
+        </Text>
         <a href={href} target="_blank" rel="noreferrer noopener">
           <Button fontWeight={"bold"} rounded="full">
             Visitar Proyecto

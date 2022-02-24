@@ -1,12 +1,4 @@
-import {
-  Box,
-  Container,
-  Heading,
-  Image,
-  Stack,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Container, Heading, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 
 const SobreMi = () => {

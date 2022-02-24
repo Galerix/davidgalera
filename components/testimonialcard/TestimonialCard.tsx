@@ -1,4 +1,5 @@
-import { Avatar, Flex, Text, useColorModeValue } from "@chakra-ui/react";
+import { Avatar, Box, Flex, Text, useColorModeValue } from "@chakra-ui/react";
+import Image from "next/image";
 import React from "react";
 import { MotionStack } from "../../motioncomponents";
 
@@ -34,6 +35,7 @@ const TestimonialCard = (props: TestimonialCardProps) => {
       maxW={"640px"}
       direction={{ base: "column-reverse", md: "row" }}
       width={"full"}
+      align={"center"}
       rounded={"xl"}
       p={5}
       spacing={15}
@@ -49,7 +51,9 @@ const TestimonialCard = (props: TestimonialCardProps) => {
         textAlign={"left"}
         justifyContent={"space-between"}
       >
-        <Text pb={4}>{content}</Text>
+        <Text pb={4} textAlign={"justify"}>
+          {content}
+        </Text>
         <Text fontWeight={"bold"}>
           {name}
           <Text as={"span"} fontWeight={"medium"} color={"gray.500"}>
@@ -58,13 +62,16 @@ const TestimonialCard = (props: TestimonialCardProps) => {
           </Text>
         </Text>
       </Flex>
-      <Avatar
-        src={avatar}
-        height={"80px"}
-        width={"80px"}
-        alignSelf={"center"}
-        m={{ base: "0 0 35px 0", md: "0 0 0 50px" }}
-      />
+      <Box
+        position={"relative"}
+        overflow={"hidden"}
+        borderRadius="full"
+        boxSize={"80px"}
+        minW={"80px"}
+        minH={"80px"}
+      >
+        <Image src={avatar} layout="fill" objectFit="cover" />
+      </Box>
     </MotionStack>
   );
 };
