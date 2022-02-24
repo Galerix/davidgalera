@@ -71,6 +71,7 @@ const Navbar = () => {
               <NextLink href="/">
                 <Box onClick={onClose}>
                   <Heading
+                    as={"h1"}
                     fontSize={{ base: 17, sm: 19 }}
                     fontFamily="title"
                     fontWeight={"semibold"}
@@ -78,6 +79,7 @@ const Navbar = () => {
                     DAVID GALERA
                   </Heading>
                   <Heading
+                    as={"h2"}
                     fontSize={{ base: 11.1, sm: 12.4 }}
                     fontWeight={"md"}
                   >

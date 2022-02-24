@@ -41,7 +41,7 @@ const Proyects = ({ isCustomPage }: ProyectsProps) => {
       spacing={{ base: 5, sm: 10, md: 20 }}
       bg={background}
     >
-      <Heading>PROYECTOS</Heading>
+      <Heading as={"h3"}>PROYECTOS</Heading>
 
       <SimpleGrid columns={{ base: 1 }} spacing={"20"} mx={"auto"}>
         {proyects.map((cardInfo, index) => (

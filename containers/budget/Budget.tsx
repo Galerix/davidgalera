@@ -32,7 +32,7 @@ const Budget = () => {
           textAlign="center"
           justifyContent={"center"}
         >
-          <Heading>PIDA PRESUPUESTO</Heading>
+          <Heading as={"h3"}>PIDA PRESUPUESTO</Heading>
           <Text
             mt={{ sm: 3, md: 3, lg: 5 }}
             color={useColorModeValue("gray.700", "gray.500")}

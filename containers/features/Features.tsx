@@ -25,7 +25,7 @@ const Features = () => {
       py={{ base: "5vh", sm: "10vh" }}
       px={"5vw"}
     >
-      <Heading>MIS SERVICIOS</Heading>
+      <Heading as={"h3"}>MIS SERVICIOS</Heading>
 
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         <Feature

@@ -28,7 +28,7 @@ export default function Testimonials() {
       py={{ base: "5vh", sm: "10vh", md: "15vh" }}
       spacing={{ base: 5, sm: 10, md: 20 }}
     >
-      <Heading>OPINIONES</Heading>
+      <Heading as={"h3"}>OPINIONES</Heading>
 
       <SimpleGrid columns={{ base: 1 }} spacing={"20"} mx={"auto"}>
         {testimonials.map((cardInfo, index) => (
