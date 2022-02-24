@@ -3,9 +3,14 @@ import React from "react";
 
 const SobreMi = () => {
   return (
-    <Container maxW={"4xl"} py={"5vh"} minH={"90vh"}>
+    <Container
+      maxW={"4xl"}
+      py={{ base: "5vh", sm: "15vh", md: "20vh" }}
+      px={"5vw"}
+      minH={"90vh"}
+    >
       <Stack direction={{ base: "column", lg: "row" }} spacing={"5vw"}>
-        <Stack direction={"column"} align="left" py={100}>
+        <Stack direction={"column"} align="left">
           <Heading>Desarrollador Web y Móvil</Heading>
           <Text textAlign={"justify"}>
             Me llamo David Galera Rodríguez. Nací en 1999 y desde siempre me
