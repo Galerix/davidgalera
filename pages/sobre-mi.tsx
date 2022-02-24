@@ -10,8 +10,8 @@ const SobreMi = () => {
       minH={"90vh"}
     >
       <Stack direction={{ base: "column", lg: "row" }} spacing={"5vw"}>
-        <Stack direction={"column"} align="left">
-          <Heading>Desarrollador Web y Móvil</Heading>
+        <Stack direction={"column"} spacing={5}>
+          <Heading textAlign={"center"}>Desarrollador Web y Móvil</Heading>
           <Text textAlign={"justify"}>
             Me llamo David Galera Rodríguez. Nací en 1999 y desde siempre me
             llamó la atención la informática. Con 12 años ya hacía animaciones,

@@ -6,7 +6,7 @@ import { MotionStack } from "../../motioncomponents";
 interface ProyectCardProps {
   title: string;
   description: string;
-  image: string;
+  image: StaticImageData;
   href: string;
   index: number;
   delay: number;
@@ -53,7 +53,14 @@ const ProyectCard = (props: ProyectCardProps) => {
         minW={"50vw"}
         position={"relative"}
       >
-        <Image src={image} layout="fill" objectFit="cover" />
+        <Image
+          src={image}
+          layout="fill"
+          objectFit="cover"
+          alt={title}
+          priority={true}
+          placeholder="blur"
+        />
       </Box>
 
       <VStack

@@ -29,6 +29,7 @@ const MobileNav = ({ navItems, onClose }: Props) => {
       ))}
       <NextLink href="/contacto">
         <Button
+          onClick={onClose}
           as="a"
           size={"sm"}
           rounded={"3xl"}

@@ -16,13 +16,13 @@ const Features = () => {
     <Stack
       as={Box}
       bgColor={useColorModeValue("gray.100", "brand.800")}
-      spacing={{ base: 16, md: 20 }}
+      spacing={{ base: 5, sm: 10, md: 20 }}
       textAlign={"center"}
       alignItems={"center"}
       justifyContent={"center"}
       overflow="hidden"
       minH={"100vh"}
-      py={"10vh"}
+      py={{ base: "5vh", sm: "10vh" }}
       px={"5vw"}
     >
       <Heading>MIS SERVICIOS</Heading>

@@ -7,7 +7,7 @@ interface TestimonialCardProps {
   name: string;
   role: string;
   content: string;
-  avatar: string;
+  avatar: StaticImageData;
   index: number;
   delay: number;
 }
@@ -70,7 +70,14 @@ const TestimonialCard = (props: TestimonialCardProps) => {
         minW={"80px"}
         minH={"80px"}
       >
-        <Image src={avatar} layout="fill" objectFit="cover" />
+        <Image
+          src={avatar}
+          layout="fill"
+          objectFit="cover"
+          alt={name}
+          priority={true}
+          placeholder="blur"
+        />
       </Box>
     </MotionStack>
   );

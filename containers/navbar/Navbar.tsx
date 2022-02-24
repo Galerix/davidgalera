@@ -20,6 +20,8 @@ import { DesktopNav, MobileNav } from "../../components";
 
 import NavItem from "../../interfaces/NavItem";
 
+import photo from "../../public/images/photo.png";
+
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onToggle, onClose } = useDisclosure();
@@ -56,10 +58,12 @@ const Navbar = () => {
               bgColor={useColorModeValue("brand.500", "brand.200")}
             >
               <Image
-                src="/images/photo.png"
+                src={photo}
                 alt="David Galera"
                 layout="fill"
                 objectFit="cover"
+                priority={true}
+                placeholder="blur"
               />
             </Box>
 

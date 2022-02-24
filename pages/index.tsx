@@ -7,7 +7,7 @@ const Home: NextPage = () => {
       <Hero />
       <Features />
       <Testimonials />
-      <Proyects originalBackground={false} />
+      <Proyects isCustomPage={false} />
       <Budget />
     </div>
   );
