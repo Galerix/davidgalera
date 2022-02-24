@@ -2,7 +2,7 @@ import React from "react";
 import { Budget } from "../containers";
 
 const Contacto = () => {
-  return <Budget isCustomPage />;
+  return <Budget />;
 };
 
 export default Contacto;

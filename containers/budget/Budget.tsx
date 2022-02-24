@@ -11,11 +11,7 @@ import {
 import { MdEmail } from "react-icons/md";
 import { ContactForm } from "../../components";
 
-type BudgetProps = {
-  isCustomPage: boolean;
-};
-
-const Budget = ({ isCustomPage }: BudgetProps) => {
+const Budget = () => {
   return (
     <Stack
       as={Box}
@@ -24,7 +20,7 @@ const Budget = ({ isCustomPage }: BudgetProps) => {
       px={5}
       alignItems={"center"}
       minH={"100vh"}
-      py={{ base: "5vh", sm: "10vh", md: isCustomPage ? "5vh" : "15vh" }}
+      py={{ base: "5vh", sm: "10vh", md: "15vh" }}
     >
       <Stack
         direction={{ base: "column", md: "row" }}
