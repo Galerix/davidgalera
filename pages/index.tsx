@@ -8,7 +8,7 @@ const Home: NextPage = () => {
       <Features />
       <Testimonials />
       <Proyects isCustomPage={false} />
-      <Budget />
+      <Budget isCustomPage={false} />
     </div>
   );
 };
