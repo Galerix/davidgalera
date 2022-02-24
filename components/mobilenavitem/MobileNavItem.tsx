@@ -20,8 +20,6 @@ const MobileNavItem = ({ navItem, onClose }: Props) => {
           onClick={onClose}
           p={2}
           fontSize={"sm"}
-          fontFamily={"body"}
-          fontWeight={"bold"}
           _hover={{ textDecoration: "none" }}
         >
           {label}

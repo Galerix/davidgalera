@@ -49,10 +49,8 @@ const TestimonialCard = (props: TestimonialCardProps) => {
         textAlign={"left"}
         justifyContent={"space-between"}
       >
-        <Text fontWeight={"medium"} fontSize={"14px"} pb={4}>
-          {content}
-        </Text>
-        <Text fontWeight={"bold"} fontSize={13}>
+        <Text pb={4}>{content}</Text>
+        <Text fontWeight={"bold"}>
           {name}
           <Text as={"span"} fontWeight={"medium"} color={"gray.500"}>
             {" "}

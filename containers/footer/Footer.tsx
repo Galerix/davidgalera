@@ -46,74 +46,6 @@ export default function Footer() {
 
   return (
     <Box bg={useColorModeValue("gray.100", "brand.800")}>
-      <Container
-        as={Stack}
-        maxW={"6xl"}
-        py={8}
-        spacing={4}
-        justify={"center"}
-        align={"center"}
-      >
-        <Stack
-          align={"center"}
-          textAlign={"center"}
-          direction={{ base: "column", sm: "row" }}
-          spacing={6}
-          minHeight="2em"
-        >
-          <NextLink href={"#"}>
-            <Link
-              borderBottomColor={linkBorderColor}
-              _hover={{
-                borderBottomWidth: 3,
-              }}
-            >
-              Inicio
-            </Link>
-          </NextLink>
-          <NextLink href={"#"}>
-            <Link
-              borderBottomColor={linkBorderColor}
-              _hover={{
-                borderBottomWidth: 3,
-              }}
-            >
-              Sobre Mí
-            </Link>
-          </NextLink>
-          <NextLink href={"#"}>
-            <Link
-              borderBottomColor={linkBorderColor}
-              _hover={{
-                borderBottomWidth: 3,
-              }}
-            >
-              Proyectos
-            </Link>
-          </NextLink>
-          <NextLink href={"#"}>
-            <Link
-              borderBottomColor={linkBorderColor}
-              _hover={{
-                borderBottomWidth: 3,
-              }}
-            >
-              Servicios
-            </Link>
-          </NextLink>
-          <NextLink href={"#"}>
-            <Link
-              borderBottomColor={linkBorderColor}
-              _hover={{
-                borderBottomWidth: 3,
-              }}
-            >
-              Contacto
-            </Link>
-          </NextLink>
-        </Stack>
-      </Container>
-
       <Box borderTopWidth={1} borderStyle={"solid"}>
         <Container
           as={Stack}
@@ -124,7 +56,7 @@ export default function Footer() {
           justify={{ base: "center", md: "space-between" }}
           align={{ base: "center", md: "center" }}
         >
-          <Text>© 2022 David Galera. Todos los derechos reservados.</Text>
+          <Text>© 2022 David Galera</Text>
           <Stack direction={"row"} spacing={6}>
             <SocialButton label={"Github"} href={"https://github.com/Galerix"}>
               <FaGithub />

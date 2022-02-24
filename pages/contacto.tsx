@@ -1,7 +1,8 @@
 import React from "react";
+import { Budget } from "../containers";
 
 const Contacto = () => {
-  return <div>Contacto</div>;
+  return <Budget />;
 };
 
 export default Contacto;

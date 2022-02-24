@@ -1,17 +1,19 @@
 import {
   Box,
   Heading,
-  Container,
   Text,
   Button,
   Stack,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
+
 import { AnimatedText } from "../../components";
 import { MotionStack, MotionText } from "../../motioncomponents";
 
 const Hero = () => {
+  const router = useRouter();
   const texts = [
     "INNOVADORAS",
     "A MEDIDA",
@@ -144,7 +146,13 @@ const Hero = () => {
         alignSelf={"center"}
         position={"inherit"}
       >
-        <Button rounded={"full"} px={6}>
+        <Button
+          rounded={"full"}
+          px={6}
+          onClick={() => {
+            router.push("/contacto");
+          }}
+        >
           CONTACTA CONMIGO
         </Button>
       </Stack>

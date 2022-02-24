@@ -43,9 +43,10 @@ export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     },
     to: "contact@davidgalera.dev, dgalerarodriguez@gmail.com",
     subject: `Solicitud de ${name}`,
-    text: message + " | Enviado por: " + email,
-    html: `<div>${message}</div><p>Enviado por:
-    ${email}</p>`,
+    text: `Mensaje: ${message} | Nombre: ${name} | Email: ${email}`,
+    html: `<p>Mensaje: ${message}</p>
+    <p>Nombre: ${name}</p>
+    <p>Email: ${email}</p>`,
   };
 
   await new Promise((resolve, reject) => {

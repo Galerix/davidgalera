@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <Box
       width={"100%"}
-      position={"sticky"}
+      position={{ base: "sticky" }}
       top={0}
       zIndex={3}
       bgGradient={useColorModeValue(
@@ -122,10 +122,6 @@ const navItems: Array<NavItem> = [
   {
     label: "Proyectos",
     href: "/proyectos",
-  },
-  {
-    label: "Servicios",
-    href: "/servicios",
   },
 ];
 
