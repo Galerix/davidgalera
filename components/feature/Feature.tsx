@@ -28,31 +28,37 @@ const Feature = ({ title, text, icon, delay }: FeatureProps) => {
     },
   };
 
+  const iconColor = useColorModeValue("white", "gray.800");
+
+  const iconBg = useColorModeValue("brand.500", "brand.200");
+
+  const textColor = useColorModeValue("gray.700", "gray.500");
+
   return (
     <MotionStack
-      willChange={"transform, opacity"}
-      align={"center"}
+      willChange="transform, opacity"
+      align="center"
       initial="hidden"
-      whileInView={"visible"}
+      whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
       variants={featureVariants}
     >
       <Flex
-        justifyContent={"center"}
-        alignItems={"center"}
+        justifyContent="center"
+        alignItems="center"
         w={16}
         h={16}
-        rounded={"full"}
-        color={useColorModeValue("white", "gray.800")}
-        bg={useColorModeValue("brand.500", "brand.200")}
+        rounded="full"
+        color={iconColor}
+        bg={iconBg}
         mb={1}
       >
         {icon}
       </Flex>
-      <Text fontWeight={600} fontFamily={"heading"}>
+      <Text fontWeight={600} fontFamily="heading">
         {title}
       </Text>
-      <Text color={useColorModeValue("gray.700", "gray.500")}>{text}</Text>
+      <Text color={textColor}>{text}</Text>
     </MotionStack>
   );
 };

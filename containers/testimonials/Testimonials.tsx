@@ -17,20 +17,20 @@ export default function Testimonials() {
   return (
     <Stack
       as={Box}
-      margin={"auto"}
-      mx={"auto"}
+      margin="auto"
+      mx="auto"
       px={4}
-      textAlign={"center"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      minH={"100vh"}
-      overflow={"hidden"}
+      textAlign="center"
+      alignItems="center"
+      justifyContent="center"
+      minH="100vh"
+      overflow="hidden"
       py={{ base: "5vh", sm: "10vh", md: "15vh" }}
       spacing={{ base: 5, sm: 10, md: 20 }}
     >
-      <Heading as={"h3"}>OPINIONES</Heading>
+      <Heading as="h3">OPINIONES</Heading>
 
-      <SimpleGrid columns={{ base: 1 }} spacing={"20"} mx={"auto"}>
+      <SimpleGrid columns={{ base: 1 }} spacing="20" mx="auto">
         {testimonials.map((cardInfo, index) => (
           <TestimonialCard
             {...cardInfo}

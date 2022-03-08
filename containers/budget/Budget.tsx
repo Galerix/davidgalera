@@ -12,6 +12,9 @@ import { MdEmail } from "react-icons/md";
 import { ContactForm } from "../../components";
 
 const Budget = () => {
+  const buttonColor = useColorModeValue("gray.700", "gray.200");
+  const textColor = useColorModeValue("gray.700", "gray.500");
+
   return (
     <Stack
       as={Box}
@@ -33,10 +36,7 @@ const Budget = () => {
           justifyContent={"center"}
         >
           <Heading as={"h3"}>PIDA PRESUPUESTO</Heading>
-          <Text
-            mt={{ sm: 3, md: 3, lg: 5 }}
-            color={useColorModeValue("gray.700", "gray.500")}
-          >
+          <Text mt={{ sm: 3, md: 3, lg: 5 }} color={textColor}>
             Si quiere solicitar un presupuesto para un proyecto puede ponerse en
             contacto conmigo a través de mi correo electrónico o rellenando el
             formulario de contacto, describiendo con el máximo detalle posible
@@ -51,9 +51,7 @@ const Budget = () => {
               _hover={{ border: "2px solid" }}
               leftIcon={<MdEmail size="20px" />}
             >
-              <Text color={useColorModeValue("gray.700", "gray.200")}>
-                contact@davidgalera.dev
-              </Text>
+              <Text color={buttonColor}>contact@davidgalera.dev</Text>
             </Button>
           </a>
         </VStack>

@@ -97,27 +97,35 @@ const Hero = () => {
     setReplay(true);
   };
 
+  const textColor = useColorModeValue("#03658C", "#6fd4fc");
+
+  const goToContact = () => {
+    router.push("/contacto");
+  };
+
+  const animate = replay ? "visible" : "hidden";
+
   return (
     <MotionStack
-      willChange={"transform, opacity"}
-      mx={"auto"}
+      willChange="transform, opacity"
+      mx="auto"
       px={4}
       as={Box}
-      textAlign={"center"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      minH={"92vh"}
-      maxW={"3xl"}
+      textAlign="center"
+      alignItems="center"
+      justifyContent="center"
+      minH="92vh"
+      maxW="3xl"
       spacing={{ base: 45, md: 15 }}
       initial="hidden"
-      whileInView={"visible"}
+      whileInView="visible"
       viewport={{ once: true }}
       variants={heroVariants}
     >
       <Heading
         fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
         as="h1"
-        lineHeight={"120%"}
+        lineHeight="120%"
       >
         DESARROLLO
         <br />
@@ -125,8 +133,8 @@ const Hero = () => {
         <MotionText
           as="span"
           initial="hidden"
-          color={useColorModeValue("#03658C", "#6fd4fc")}
-          animate={replay ? "visible" : "hidden"}
+          color={textColor}
+          animate={animate}
           variants={animatedTextVariants}
           onAnimationComplete={handleReplay}
         >
@@ -140,19 +148,13 @@ const Hero = () => {
         ideas en webs & apps que atraen mas clientes a sus negocios.
       </Text>
       <Stack
-        direction={"column"}
+        direction="column"
         spacing={5}
-        align={"center"}
-        alignSelf={"center"}
-        position={"inherit"}
+        align="center"
+        alignSelf="center"
+        position="inherit"
       >
-        <Button
-          rounded={"full"}
-          px={6}
-          onClick={() => {
-            router.push("/contacto");
-          }}
-        >
+        <Button rounded="full" px={6} onClick={goToContact}>
           CONTACTA CONMIGO
         </Button>
       </Stack>

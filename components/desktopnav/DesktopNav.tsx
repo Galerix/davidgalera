@@ -24,6 +24,8 @@ const DesktopNav = ({ navItems }: Props) => {
 
   const linkBorderColor = useColorModeValue("brand.500", "brand.200");
 
+  const colorModeIcon = colorMode === "light" ? <MoonIcon /> : <SunIcon />;
+
   return (
     <Stack direction={"row"} spacing={4} align="center">
       {navItems.map((navItem: NavItem) => (
@@ -62,7 +64,7 @@ const DesktopNav = ({ navItems }: Props) => {
         size={"sm"}
         onClick={toggleColorMode}
         variant="ghost"
-        icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+        icon={colorModeIcon}
         aria-label={"Toggle Color Mode"}
       />
     </Stack>

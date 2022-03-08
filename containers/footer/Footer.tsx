@@ -42,10 +42,10 @@ const SocialButton = ({
 };
 
 export default function Footer() {
-  const linkBorderColor = useColorModeValue("brand.500", "brand.200");
+  const bgColor = useColorModeValue("gray.100", "brand.800");
 
   return (
-    <Box bg={useColorModeValue("gray.100", "brand.800")}>
+    <Box bg={bgColor}>
       <Box borderTopWidth={1} borderStyle={"solid"}>
         <Container
           as={Stack}

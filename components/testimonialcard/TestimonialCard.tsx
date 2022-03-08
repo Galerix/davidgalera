@@ -28,47 +28,45 @@ const TestimonialCard = (props: TestimonialCardProps) => {
     },
   };
 
+  const bgColor = useColorModeValue("white", "brand.800");
+
   return (
     <MotionStack
-      willChange={"transform, opacity"}
-      boxShadow={"2xl"}
-      maxW={"640px"}
+      willChange="transform, opacity"
+      boxShadow="2xl"
+      maxW="640px"
       direction={{ base: "column-reverse", md: "row" }}
-      width={"full"}
-      align={"center"}
-      rounded={"xl"}
+      width="full"
+      align="center"
+      rounded="xl"
       p={5}
       spacing={15}
-      position={"relative"}
-      bg={useColorModeValue("white", "brand.800")}
+      position="relative"
+      bg={bgColor}
       initial="hidden"
-      whileInView={"visible"}
+      whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
       variants={testimonialVariants}
     >
-      <Flex
-        direction={"column"}
-        textAlign={"left"}
-        justifyContent={"space-between"}
-      >
-        <Text pb={4} textAlign={"justify"}>
+      <Flex direction="column" textAlign="left" justifyContent="space-between">
+        <Text pb={4} textAlign="justify">
           {content}
         </Text>
-        <Text fontWeight={"bold"}>
+        <Text fontWeight="bold">
           {name}
-          <Text as={"span"} fontWeight={"medium"} color={"gray.500"}>
+          <Text as="span" fontWeight="medium" color="gray.500">
             {" "}
             - {role}
           </Text>
         </Text>
       </Flex>
       <Box
-        position={"relative"}
-        overflow={"hidden"}
+        position="relative"
+        overflow="hidden"
         borderRadius="full"
-        boxSize={"80px"}
-        minW={"80px"}
-        minH={"80px"}
+        boxSize="80px"
+        minW="80px"
+        minH="80px"
       >
         <Image
           src={avatar}

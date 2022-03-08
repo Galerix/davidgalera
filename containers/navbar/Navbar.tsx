@@ -26,16 +26,28 @@ const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onToggle, onClose } = useDisclosure();
 
+  const bgGradientNavbar = useColorModeValue(
+    "linear(to-b, gray.100, rgba(247, 250, 252, 0))",
+    "linear(to-b, brand.900, rgba(1, 20, 28, 0))"
+  );
+
+  const imageBgColor = useColorModeValue("brand.500", "brand.200");
+
+  const colorModeIcon = colorMode === "light" ? <MoonIcon /> : <SunIcon />;
+
+  const toggleNavigationIcon = isOpen ? (
+    <CloseIcon w={3} h={3} />
+  ) : (
+    <HamburgerIcon w={5} h={5} />
+  );
+
   return (
     <Box
       width={"100%"}
       position={{ base: "sticky" }}
       top={0}
       zIndex={3}
-      bgGradient={useColorModeValue(
-        "linear(to-b, gray.100, rgba(247, 250, 252, 0))",
-        "linear(to-b, brand.900, rgba(1, 20, 28, 0))"
-      )}
+      bgGradient={bgGradientNavbar}
       backdropFilter="auto"
       backdropBlur="8px"
       minH={"8vh"}
@@ -55,7 +67,7 @@ const Navbar = () => {
               overflow={"hidden"}
               borderRadius="full"
               boxSize={{ base: "30px", sm: "40px", md: "50px" }}
-              bgColor={useColorModeValue("brand.500", "brand.200")}
+              bgColor={imageBgColor}
             >
               <Image
                 src={photo}
@@ -104,15 +116,13 @@ const Navbar = () => {
             onClick={toggleColorMode}
             size="sm"
             variant="ghost"
-            icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            icon={colorModeIcon}
             aria-label={"Toggle Color Mode"}
           />
           <IconButton
             onClick={onToggle}
             size="sm"
-            icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-            }
+            icon={toggleNavigationIcon}
             variant={"ghost"}
             aria-label={"Toggle Navigation"}
           />
